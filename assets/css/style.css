@@ -1,0 +1,48 @@
+body {
+  background-image: url("../images/pinkdust.png");
+  background-size: cover;
+  font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
+  
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: aqua;
+}
+
+h1 {
+  padding: 10px 0 0 10px;
+}
+
+.gif {
+  height: 200px;
+  width: 400px;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: 1px solid darkgreen;
+  color: white;
+  margin: 1px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+#restart{
+  margin-bottom: 10px;
+}
+
+/* Media query to gif when width shrinks */
+@media screen and (max-width: 768px) {
+
+  .gif {
+    height: 100px;
+    width: 200px;
+  }
+}
