@@ -1,10 +1,19 @@
-var artists = [ 
-  "Young Thug" ,
-  "Drake" ,
+var artists = [
+  "Young Thug",
+  "Drake",
   "Lil Wayne",
   "Nicki Minaj",
   "Lil Baby"
 ];
+
+$(document).ready(function () {
+  $(document).on("click", ".gif", gifState);
+  $(document).on("click", "#add-artist", addArtist);
+  $(document).on("click", ".artist", search);
+  // Calling the renderButtons function at least once to display the initial list of artists
+  renderButtons();
+});
+
 
 // Function for displaying artist buttons
 function renderButtons() {
@@ -30,7 +39,7 @@ function renderButtons() {
 }
 
 // This function handles events where one button is clicked
-$("#add-artist").on("click", function(event) {
+function addArtist() {
   // event.preventDefault() prevents the form from trying to submit itself.
   event.preventDefault();
 
@@ -41,13 +50,12 @@ $("#add-artist").on("click", function(event) {
 
   // calling renderButtons which handles the processing of our artist array
   renderButtons();
-});
+}
 
-// Calling the renderButtons function at least once to display the initial list of artists
-renderButtons();
+
 
 // Event listener for all button elements
-$(".artist").on("click", function() {
+function search() {
   // In this case, the "this" keyword refers to the button that was clicked
   var artist = $(this).attr("data-name");
 
@@ -61,7 +69,7 @@ $(".artist").on("click", function() {
     method: "GET"
   })
     // After the data comes back from the API
-    .then(function(response) {
+    .then(function (response) {
       // Storing an array of results in the results variable
       var results = response.data;
 
@@ -98,9 +106,9 @@ $(".artist").on("click", function() {
         }
       }
     });
-});
+}
 
-$(".gif").on("click", function() {
+function gifState() {
   // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
   var state = $(this).attr("data-state");
   // If the clicked image's state is still, update its src attribute to what its data-animate value is.
@@ -113,4 +121,4 @@ $(".gif").on("click", function() {
     $(this).attr("src", $(this).attr("data-still"));
     $(this).attr("data-state", "still");
   }
-});
+}
