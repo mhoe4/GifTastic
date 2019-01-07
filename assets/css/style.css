@@ -15,9 +15,24 @@ h1 {
   padding: 10px 0 0 10px;
 }
 
+.container {
+  margin-top: 10px;
+}
+
+.card-header {
+  padding: 5px 0px 5px 5px;
+}
+
+#add-artist-form{
+  float: right;
+}
+
 .gif {
-  height: 200px;
-  width: 400px;
+  clear: both;
+  overflow: hidden;
+  float: left;
+  width: 90%;
+  margin: 10px 10px 10px 10px;
 }
 
 button {

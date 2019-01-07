@@ -41,26 +41,27 @@
       <div class="col-md-12 ">
 
         <div class="card ">
-          <div class="card-header text-center">
-            <div id="artist-buttons"></div>
-            <form id="add-artist-form">
-              <label for="artist-input">Add an Artist</label>
-              <input type="text" id="artist-input"><br>
+          <div class="card-header">
+            <div class="row ">
+              <div class="col-lg-9 ">
+                <div id="artist-buttons"></div>
+              </div>
+              <div class="col-lg-3">
+                <form id="add-artist-form">
+                  <label for="artist-input">Add an Artist</label><br>
+                  <input type="text" id="artist-input">
 
-              <!-- Button triggers new artist to be added -->
-              <input id="add-artist" type="submit" value="Add">
-            </form>
+                  <!-- Button triggers new artist to be added -->
+                  <input id="add-artist" type="submit" value="Add">
+                </form>
+              </div>
+            </div>
+
           </div>
 
           <div class="card-body">
 
-            <!-- Timer Div -->
-            <div class="text-center" id="time">
-              <button id="start">Start</button>
-            </div>
-            <!-- End Timer Div -->
-
-            <div id="trivia" class="text-center"></div>
+            <div id="gifs-appear-here"></div>
           </div>
         </div>
 
