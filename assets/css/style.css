@@ -1,6 +1,6 @@
 body {
   background-image: url("../images/pinkdust.png");
-  background-size: cover;
+  background-size: repeat;
   font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
   
 }
@@ -27,12 +27,17 @@ h1 {
   float: right;
 }
 
-.gif {
-  clear: both;
+.gif-div {
   overflow: hidden;
   float: left;
-  width: 90%;
+  border: 1px solid black;
   margin: 10px 10px 10px 10px;
+}
+
+.rating {
+  background-color: aqua;
+  margin-bottom: 0;
+  padding-left: 10px;
 }
 
 button {
