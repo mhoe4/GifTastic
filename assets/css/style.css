@@ -2,7 +2,6 @@ body {
   background-image: url("../images/pinkdust.png");
   background-size: repeat;
   font-family: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif';
-  
 }
 
 .header {
@@ -52,10 +51,6 @@ button {
 button:hover {
   background-color: darkgreen;
   color: white;
-}
-
-#restart{
-  margin-bottom: 10px;
 }
 
 /* Media query to gif when width shrinks */
